@@ -1,0 +1,108 @@
+.reviews-box{
+    &__item{
+        border-bottom: 1px solid #D9DDE8;
+        padding: 0 0 40px;
+        margin: 0 0 40px;
+        &:last-child{
+            border-bottom: none;
+        }
+    }
+    .reviews-item__name{
+        font-size: 18px;
+    }
+    .reviews-item__description{
+        height: auto;
+    }
+}
+/* Рейтинг */
+.raiting-list{
+    padding: 0 0 10px;
+    .raiting-list__item{
+        padding: 0 5px 0 0;
+        width: 22px;
+        height: 17px;
+        background:url(../images/icon/star.png) no-repeat 0 0px;
+        &.active{
+            background:url(../images/icon/star.png) no-repeat 0 -17px;
+        }
+    }
+    &.raiting-list-form{
+        &:not(.no-hover){
+            &:hover{
+                cursor: pointer;
+                .raiting-list__item{
+                    background:url(../images/icon/star.png) no-repeat 0 -34px;
+                    &:hover{
+                        & ~ .raiting-list__item{
+                            background:url(../images/icon/star.png) no-repeat 0 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.page-reviews{
+    h2{
+        padding-bottom: 30px;
+    }
+}
+.review-form-box{
+    .form-control{
+        border: 1px solid #D9DDE8;
+        border-radius: 5px;
+    }
+    input{
+        height: 45px;
+    }
+    textarea{
+        height: 65px;
+    }
+    .file-upload{
+        input[type=file]{
+            display: none;
+        }
+        label{
+            display: inline-block;
+            cursor: pointer;
+            padding: 8px 12px;
+            background: #F5F5F5;
+            transition: 0.2s;
+            &:hover{
+                background: #696969;
+                span{
+                    color: $color-white;
+                }
+            }
+        }
+        span{
+            color: #161616;
+            font-size: 14px;
+            line-height: 1.2;
+            font-weight: normal;
+            padding: 5px 0 0;
+            padding: 0;
+            .fa{
+                position: relative;
+                font-size: 1.3em;
+                border: none;
+                background: transparent;
+                transform: rotate(90deg);
+            }
+            #count_file{
+                display: inline-block;
+                margin: 0 0 0 10px;
+            }
+        }
+    }
+    .form-button{
+        margin-top: 20px;
+    }
+}
+.raiting-form__header{
+    padding-bottom: 10px;
+}
+
+@media (max-width: 1000px){
+    
+}

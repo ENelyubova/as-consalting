@@ -1,0 +1,183 @@
+.directions{
+	&-item{
+		width: 100%;
+		/* min-height: 290px;*/
+		margin-bottom: 20px;
+	    padding: 10px;
+	    border-radius: 5px;
+	    background: #FDFDFD;
+	    box-shadow: -20px 0px 40px rgba(250, 251, 255, 0.7), 0px 20px 40px rgba(166, 171, 189, 0.5);
+	    &__name{
+	    	width: 32%;
+	    	height: auto;
+	    	flex: 1 1 auto;
+	    	padding-right: 20px;
+	    }
+	    &__title{
+	    	svg{
+	    		margin-right: 15px;
+	    	}
+			span{
+				display: block;
+				margin: 10px 0;
+				@include fontF($familyMedium, 30px, 500, $color-black);
+				&:hover{
+					color: $color-blue;
+				}
+			}
+		}
+		&__btn{
+			margin-top: 30px;
+			width: -webkit-max-content;
+			width: -moz-max-content;
+			width: max-content;
+		}
+	    &__subdirection{
+	    	width: 65%;
+	    	height: auto;
+	    }
+	}
+	&-boxStyle{
+		padding: 30px;
+		height: 100%;
+		border-radius: 5px;
+		border: 1px solid rgba(217, 221, 232, 0.7); 
+	}
+}
+.subdirection{
+	padding: 10px 0 10px 30px;
+	border-left: 1px solid $color-bordercolor;
+	ul{
+		height: 100%;
+		-moz-column-count: 2;
+		     column-count: 2;
+	    -moz-column-gap: 15px;
+	         column-gap: 15px;
+		li{
+			position: relative;
+			padding-left: 20px;
+			padding-right: 15px;
+			margin-bottom: 15px;
+			a{
+			    transition: all 0.3s ease-in-out;
+				@include fontF($familyRegular, 20px, 400, $color-black);
+				&:hover{
+					color: $color-blue;
+				}
+			}
+			&:before{
+				content: url(../images/icon/done.svg);
+				position: absolute;
+			    left: 0;
+			    top: -2px;
+			}
+		}
+	}
+}
+
+@media (max-width: 1600px) {
+	.directions{
+		&-item{
+			&__title{
+				span{
+					font-size: 28px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 1440px) {
+    .directions{
+		&-item{
+			&__title{
+				svg{
+					height: 60px;
+					width: auto;
+				}
+			}
+		}
+	}
+	.subdirection{
+		ul{
+			li{
+				a{
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1270px) {
+    .directions{
+		&-item{
+			/* height: auto;*/
+			&__title{
+				span{
+					font-size: 22px;
+				}
+				svg{
+					height: 50px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+    .directions{
+    	&-boxStyle{
+    		flex-direction: column;
+    		padding: 20px;
+    	}
+    	&-item{
+    		&__name{
+    			width: 100%;
+    			padding-right: 0;
+    		}
+    		&__subdirection{
+    			width: 100%;
+    			margin-top: 20px;
+    			padding: 10px 0 10px 10px;
+    			border-left: none;
+    		}
+    	}
+    }
+}
+
+@media (max-width: 767px) {
+    .directions{
+		&-item{
+			&__title{
+				span{
+					font-size: 18px;
+				}
+				svg{
+					height: 35px;
+				}
+			}
+			&__subdirection{
+				display: none;
+			}
+			.btn{
+				margin-top: 20px;
+			}
+		}
+	}
+	.subdirection{
+		ul{
+			-moz-column-count: 1;
+			     column-count: 1;
+			li{
+				a{
+					font-size: 16px;
+					line-height: 1.4;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 440px) {
+    
+}

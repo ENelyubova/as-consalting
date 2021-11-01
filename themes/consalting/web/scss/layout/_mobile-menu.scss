@@ -1,0 +1,281 @@
+/* Мобильное меню */
+.menu_m_visible{
+    overflow: hidden;
+}
+.mobile-panel{
+    position: absolute;
+    right: -90px;
+    z-index: 300;
+}
+.m-menu-button{
+    background: transparent;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 10;
+    @include transform-mobile-link;
+    .line{
+        display: block;
+        position: absolute;
+        left: 50%;
+        width: 24px;
+        height: 3px;
+        background-color: $color-darkblue;
+        opacity: 1;
+        transform: translateX(-50%) rotate(0deg);
+        transition: .25s ease-in-out;
+        &:nth-child(1){
+            top: 17px;
+        }
+        &:nth-child(2){
+            top: 27px;
+        }
+        &:nth-child(3){ 
+            top: 27px;
+        }
+        &:nth-child(4){
+            top: 37px;
+        }
+    }
+    &.m-menu-open{
+        position: relative;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 2px solid $color-bordercolor;
+    }
+    &.open{
+        .line{
+            background-color: $color-darkblue;
+            &:nth-child(1){
+                top: 17px;
+                width: 0%;
+                left: 50%;
+            }
+            &:nth-child(2){
+                transform: translateX(-50%) rotate(45deg);
+            }
+            &:nth-child(3){
+                transform: translateX(-50%) rotate(-45deg);
+            }
+            &:nth-child(4){
+                top: 17px;
+                width: 0%;
+                left: 50%;
+            }
+        }
+    }
+}
+.mobile-menu{
+    position: fixed;
+    top: 0; left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #EBEDF3;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 254;
+    scrollbar-color: ligthen(rgba(33,33,33,0.1),5) rgba(33,33,33,0.2);
+    scrollbar-width: thin;
+    &__header{
+        a{
+            @include fontF($familyMedium, 18px, 600, $color-darkblue);
+        }
+    }
+    &__phone{
+        margin: 0 30px;
+    }
+    &__email{
+        margin: 0 30px;
+        a{
+            text-decoration: underline;
+        }
+    }
+    &__nav{
+        position: relative;
+        margin: 70px 0 50px;
+        >ul{
+            >li{
+                width: 50%;
+                padding-bottom: 15px;
+                cursor: pointer;
+                a{
+                    display: inline-block;
+                    border-bottom: 2px solid transparent;
+                    transform: translateX(0px);
+                    transition: .3s linear;
+                    text-decoration: none;
+                    @include fontF($familyMedium, 45px, 600, $color-darkblue);
+                }
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    position: absolute;
+                    top: 0%;
+                    left: 50%;
+                    width: 50%;
+                    transition: .3s;
+                    opacity: 0;
+                    visibility: hidden;
+                    z-index: 100;
+                    li{
+                        padding-bottom: 10px;
+                        a{
+                            font-size: 24px;
+                            &:hover{
+                                border-bottom: 2px solid $color-darkblue;
+                            }
+                        }
+                    }
+                }
+                &:hover{
+                    >a{
+                        border-bottom: 2px solid $color-darkblue;
+                        transform: translateX(10px);
+                    }
+                    ul{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }   
+            }
+        }
+    }
+    &.active-menu{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+.mobile-menu::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.3);
+}
+
+.mobile-menu::-webkit-scrollbar
+{
+    width: 3px;
+    height: 3px;
+}
+
+.mobile-menu::-webkit-scrollbar-thumb
+{
+    height: 2px;
+    background-color: #cdcdcd;
+}
+.mobile-content{
+    padding: 20px 0;
+}
+
+@media (max-width: 1600px){
+    .mobile-panel{
+        right: -60px;
+    }
+    .m-menu-button{
+        &.m-menu-open {
+            width: 50px;
+            height: 50px;
+            .line{
+                &:nth-child(1){
+                    top: 12px;
+                }
+                &:nth-child(2){
+                    top: 22px;
+                }
+                &:nth-child(3){
+                    top: 22px;
+                }
+                &:nth-child(4){
+                    top: 32px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1440px){
+    .mobile-menu__nav{
+        >ul{
+            >li{
+                a{
+                    font-size: 40px;
+                }
+                ul{
+                    li{
+                        a{
+                            font-size: 21px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1360px){
+    .mobile-panel{
+        position: relative;
+        right: 0;
+    }
+}
+@media (max-width: 1270px){
+    .mobile-menu{
+        &__email{
+            margin-right: 90px;
+        }
+        &__nav{
+            >ul{
+                >li{
+                    a{
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+    }
+    .mobile-content{
+        padding: 10px 0;
+    }
+}
+@media (max-width: 1000px){
+    .mobile-menu{
+        &__header{
+            flex-direction: column;
+            align-items: flex-start;
+            a{
+                font-size: 16px;
+            }
+        }
+        &__link{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__phone{
+            margin: 15px 0;
+        }
+        &__email{
+            margin: 0;
+        }
+        &__nav{
+            margin: 30px 0;
+            >ul{
+                >li{
+                    width: 100%;
+                    a{
+                        font-size: 27px;
+                    }
+                    ul{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .mobile-menu__nav>ul>li a{
+        font-size: 20px;
+    }
+}

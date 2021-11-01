@@ -1,0 +1,144 @@
+.help-block{
+    margin-bottom: 0;
+}
+.error{
+    color: $color-red;
+}
+.compensate-for-scrollbar{
+    margin-right: 0 !important;
+    padding-right: 17px;
+}
+.modal-open{
+    overflow: hidden;
+    padding-right: 17px;
+    @media (max-width: 1000px){
+        padding-right: 0;
+    }
+}
+#messageModal{
+    overflow-y: hidden;
+}
+.modal{
+    .control-label{
+        display: none;
+    }
+    &-wrap{
+        height: 100%;
+    }
+    &-dialog{
+        margin: 50px auto;
+        width: 300px;
+        &-msg{
+            margin: 80px auto;
+            width: 355px;
+        }
+    }
+    &-content{
+        border-radius: 0;
+        width: 335px;
+        box-shadow: none;
+        border: none;
+    }
+    &-img{
+        position: relative;
+        background-size: cover;
+    }
+    &-header{
+        padding: 25px 40px 0;
+        border-bottom: none;
+        background: #fff;
+        background-size: cover;
+    }
+    &-heading{
+        h3{
+            /* text-transform: uppercase;*/
+            @include fontF($familyMedium, 24px, 500, $color-black);
+        }
+    }
+    &-close{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        &-mobile{
+            display: none;
+        }
+    }
+    &-body{
+        padding: 8px 40px 30px;
+        @include fontF($familyRegular, 16px, 400, $color-text);
+        p{
+            margin-bottom: 25px;
+        }
+        label{
+            @include fontF($familyRegular, 16px, 400, $color-black);
+        }
+        input{
+            height: 35px;
+        }
+        textarea{
+            height: auto;
+        }
+        .form-captcha{
+            position: relative;
+            left: -18px;
+            top: 0px;
+            display: block;
+            margin: 0;
+            transform: scale(0.85);
+        }
+        .form-button{
+            margin-top: 15px;
+        }
+        .btn{
+            width: 100%;
+        }
+    }
+}
+.terms_of_use{
+    padding: 15px 0px 0px;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #959595;
+    a{
+        color: #959595;
+        text-decoration: underline;
+    }
+}
+
+
+@media (max-width: 850px){
+    .modal{
+        &-img{
+            display: none;
+        }
+        &-close-mobile{
+            display: block;
+        }
+    }
+}
+@media (max-width: 400px){
+    .modal{
+        &-dialog{
+            &-msg{
+                width: 300px;
+            }
+        }
+        &-content{
+            width: 300px;
+        }
+        &-header{
+            padding: 30px 20px 0;
+        }
+        &-heading{
+            h3{
+                font-size: 21px;
+            }
+        }
+        &-body{
+            padding: 8px 20px 20px;
+        }
+    }
+}

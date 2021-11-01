@@ -1,0 +1,35 @@
+.breadcrumb{
+    padding: 30px 0 !important;
+    margin-bottom: 0 !important;
+    background-color: transparent;
+    li{
+        +li{
+            &:before{
+                content: "\f105";
+                display: inline-block;
+                padding: 0px 8px;
+                font: normal normal normal 14px/1 FontAwesome;
+            }
+        }
+        a{
+            text-decoration: underline;
+            @include fontF($familyRegular, 16px, 400, $color-text);
+        }
+    }
+    .active{
+        @include fontF($familyRegular, 16px, 400, #A4A4A4);
+    }
+}
+
+@media (max-width: 767px){
+    .breadcrumb{
+        li{
+            a{
+                font-size: 14px;
+            }
+        }
+        .active{
+            font-size: 14px;
+        }
+    }
+}

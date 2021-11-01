@@ -1,0 +1,96 @@
+.contacts{
+	background-color: $color-white;
+	&-item{
+		width: 49%;
+		&__elem{
+			margin-bottom: 25px;
+			p{
+				color: $color-text;
+			}
+		}
+		&__email{
+			a{
+				transition: all 0.3s ease-in-out;
+				text-decoration: underline;
+				@include fontF($familyRegular, 45px, 500, $color-black);
+			}
+		}
+		&__address{
+			@include fontF($familyRegular, 24px, 500, $color-black);
+			span{
+				display: block;
+				font-size: 45px;
+				margin-bottom: 10px;
+			}
+		}
+		&__phone{
+			a{
+				@include fontF($familyRegular, 45px, 500, $color-blue);
+			}
+		}
+	}
+}
+
+
+@media (max-width: 1600px){
+	.contacts{
+		&-item{
+			&__email a, &__address span, &__phone a{
+				font-size: 40px;
+			}
+		}
+	}
+}
+@media (max-width: 1440px){
+	.contacts{
+		&-item{
+			&__email a, &__phone a{
+				font-size: 35px;
+			}
+			&__address{
+				font-size: 21px;
+				span{
+					font-size: 35px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 1000px){
+	.contacts{
+		&-item{
+			&__email a, &__phone a{
+				font-size: 27px;
+			}
+			&__address{
+				font-size: 18px;
+				span{
+					font-size: 27px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 767px){
+	.contacts{
+		&-item{
+			width: 100%;
+			margin-bottom: 25px;
+			&__elem{
+				margin-bottom: 15px;
+			}
+			&__email a, &__phone a{
+				font-size: 22px;
+			}
+			&__address{
+				font-size: 16px;
+				span{
+					font-size: 22px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 600px){
+	
+}

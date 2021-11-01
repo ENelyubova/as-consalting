@@ -1,0 +1,3 @@
+<?php if($pages) : ?>
+	<?= $pages->body; ?>
+<?php endif; ?>

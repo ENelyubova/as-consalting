@@ -1,0 +1,232 @@
+.lk-form{
+	width: 420px;
+	margin: 0 auto;
+	.lk-form__box{
+		width: 400px;
+		margin: 0 auto;
+		padding: 40px 50px;
+		background: #fff;
+		border: 1px solid #f0f0f0;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+	}
+	.lk-form__bottom{
+		color: #000;
+	    font-size: 14px;
+		text-align: center;
+		padding: 30px 0;
+		a{
+			font-size: 16px;
+			padding: 3px 0 0;
+		}
+	}
+	.form-button{
+        margin-top: 15px;
+    }
+	.form-my{
+		.terms_of_use{
+			padding-top: 10px;
+			text-align: center;
+			font-size: 12px;
+			color: #959595;
+		}
+		input[type="submit"], button{
+			width: 100%;
+		}
+	}
+	&:after{
+		content: '';
+		clear: both;
+		display: block;
+	}
+	.btn-red{
+		padding: 14px 40px;
+	}
+}
+
+.lk-form-header{
+    padding: 0 0 30px;
+	h1{
+	    margin: 0;
+    	padding: 0 !important;
+	    text-align: center;
+	}
+	.lk-form-header__desc{
+		color: rgba(#000, 0.9);
+	    text-align: center;
+	    padding: 10px 0 0;
+	}
+}
+
+.login-form{
+	.login-form__item{
+		position: relative;
+		padding: 20px 0px 0px;
+	}
+	.login-form__link{
+		position: absolute;
+		top: 2px;
+	    right: 10px;
+	    color: #000;
+	    font-size: 13px;
+	    line-height: 1;
+	    text-decoration: underline;
+	}
+	.form-group {
+    	margin: 0 0 20px;
+    }
+    .form-control{
+	    height: 45px;
+	    width: 100%;
+	    padding-left: 20px;
+	    background: #FBFBFB;
+	    border: 1px solid #DAE1E3;
+	    border-radius: 5px;
+	    font-family: $ubuntu;
+	    font-size: 16px;
+	    font-weight: 400;
+	    color: #757575;
+    }
+	.form-button{
+		button{
+			width: auto;
+			padding: 14px 40px;
+		}
+	}
+}
+
+.file-upload{
+	position: relative;
+	label{
+		display: inline-block;
+    	cursor: pointer;
+	}
+	input[type="file"]{
+		display: none;
+	}
+	span{
+	    color: #212121;
+	    font-size: 14px;
+	    line-height: 1.2;
+	    font-weight: normal;
+	    padding: 5px 0 0;
+	    #count_file{
+    	    display: inline-block;
+		    border-bottom: 1px solid #b3b3b3;
+		    margin: 0 0 0 10px;
+	    }
+	}
+}
+.form-white{
+	.file-upload{
+		text-align: center;
+		span {
+			#count_file{
+				margin: 10px 0 0;
+			}
+		}
+	}
+	.radio-inline{
+		position: relative;
+		display: inline-block;
+		margin: 0;
+		padding: 0 35px 0px 0px;
+		left: -2px;
+		input[type="radio"]{
+			vertical-align: top;
+			width: 14px;
+			height: 14px;
+			margin: 0;
+			& + label {
+				display: block;
+				position: relative;
+				width: auto;
+	            color: rgba(0, 0, 0, 0.8);
+	            font-size: 18px;
+	            font-family: $ubuntu;
+				line-height: 15px;
+		        font-weight: normal;
+	            padding: 0 0 0 25px;
+	            cursor: pointer;
+			}
+			&:not(checked) {
+				position: absolute;
+				opacity: 0;
+				& + label {
+					&:before {
+		                content: '';
+		                position: absolute;
+		                left: 4px; 
+		                top: 5px;
+		                width: 6px; 
+		                height: 6px;
+		                background: $color-green;
+		                opacity: 0;
+		                @include border-radius(50%);
+		                @include transition(all .3s linear);
+		            }
+		            &:after {
+		                content: '';
+		                position: absolute;
+		                left: 0;
+		                top: 1px;
+		                width: 14px; 
+		                height: 14px;
+		                border: 1px solid #cccccc;
+		                background: transparent;
+		                @include border-radius(50%);
+		                @include transition(all .3s linear);
+		            }
+				}
+			}
+			&:checked{
+				& + label{
+					&:before {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 480px){
+	.lk-form{
+		width: 100%;
+		.lk-form__box{
+			width: 100%;
+			padding: 30px 0;
+			form{
+				width: 305px;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.form-white{
+		.file-upload{
+			text-align: left;
+		}
+	}
+}
+
+
+@media (max-width: 400px){
+	.lk-form{
+		.lk-form__box{
+			form{
+				width: 260px;
+				margin: 0 auto;
+			}
+		}
+		.form{
+			.form-captcha{
+			    position: relative;
+			    left: -18px;
+			    top: -5px;
+			    display: block;
+			    margin: 0 auto 10px;
+			    transform: scale(0.85);
+			}
+		}
+	}
+}

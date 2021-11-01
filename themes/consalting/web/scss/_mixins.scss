@@ -1,0 +1,92 @@
+@mixin delay{
+	transition-duration: 0.3s;
+	transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@mixin font($size, $weight, $color){
+	font-size: $size; font-weight: $weight;  color: $color;
+}
+
+@mixin fontFS($font, $size){
+	font-family: $font; font-size: $size;
+}
+
+@mixin fontF($font, $size, $weight, $color){
+	font-family: $font; font-size: $size; font-weight: $weight;  color: $color;
+}
+
+@mixin border($style, $width, $color){
+	border-style: $style; border-width: $width; border-color: $color;
+}
+
+@mixin borderR($style, $width, $color, $radius){
+	border-style: $style; border-width: $width; border-color: $color; border-radius: $radius;
+}
+
+@mixin flex-middle{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+@mixin flex-middle-center{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin vertical-middle-flex{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+@mixin align-center-flex{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin vertical-middle-pos{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin align-center-pos{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin transition-line{
+	transition: all 900ms; 
+}
+
+@mixin rotate-first-line{
+	transform: rotate(45deg) translateY(15px);
+}
+@mixin rotate-last-line{
+	transform: rotate(-45deg) translateY(-16px);
+}
+@mixin rotate-two-line{
+	transform: translateX(-100px);
+}
+
+@mixin transform-mobile-menu{
+	transform: translateX(-101%);
+}
+
+@mixin translate-mobile-link{
+	transform: translateX(0);
+}
+
+@mixin transform-mobile-link{
+	transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+
+

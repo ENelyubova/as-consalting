@@ -1,0 +1,42 @@
+/* Страница поиска */
+.page-search{
+    h4{
+        padding-top: 30px;
+    }
+    .form-inline{
+        display: flex;
+        align-items: center;
+        margin: 30px 0;
+    }
+    .form-control{
+        height: 50px;
+        width: 100%;
+        margin-right: 15px;
+        padding-left: 20px;
+        padding-right: 40px;
+        border-radius: 50px;
+        border: 1px solid rgba(0,0,0,0.15);
+        background: rgba(255,255,255,0.1);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        font-family: $familyRegular;
+        font-size: 14px;
+        font-weight: 400;
+        color: #373E44;
+    }
+}
+
+@media (max-width: 767px){
+    .page-search{
+        h4{
+            padding-top: 0;
+        }
+        .form-inline{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .form-control{
+            margin-bottom: 15px;
+        }
+    }
+}

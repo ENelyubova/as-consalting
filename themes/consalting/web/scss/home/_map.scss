@@ -1,0 +1,91 @@
+.map{
+	padding-top: 155px;
+	padding-bottom: 240px;
+	&-block{
+		position: relative;
+	}
+	&__text{
+		width: 42%;
+		p{
+			@include fontF($familyRegular, 20px, 400, $color-black);
+		}
+		.btn{
+			margin-top: 45px;
+		}
+	}
+	&__img{
+		position: absolute;
+		width: 1366px;
+		right: -194px;
+    	bottom: -225px;
+		z-index: -1;
+	}
+}
+
+
+@media (max-width: 1740px){
+	.map{
+		&__text{
+			/* width: 50%;*/
+		}
+		&__img{
+			width: 1250px;
+		}
+	}
+}
+@media (max-width: 1600px){
+	.map{
+		&__text{
+			h2{
+				br{
+					display: none;
+				}
+			}
+		}
+		&__img{
+			width: 100%;
+		}
+	}
+}
+@media (max-width: 1440px){
+	
+}
+@media (max-width: 1270px){
+	.map{
+		padding-top: 70px;
+		padding-bottom: 100px;
+		&__text{
+			p{
+				font-size: 16px;
+			}
+		}
+		&__img{
+			right: -250px;
+    		bottom: -100px;
+		}
+	}
+}
+@media (max-width: 1000px){
+	.map{
+		&__img{
+    		bottom: 0;
+		}
+	}
+}
+@media (max-width: 767px){
+	.map{
+		padding-bottom: 20px;
+		&__text{
+			width: 100%;
+			.btn{
+				margin-top: 35px;
+			}
+		}
+		&__img{
+			display: none;
+		}
+	}
+}
+@media (max-width: 600px){
+	
+}

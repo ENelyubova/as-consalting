@@ -1,0 +1,280 @@
+.modal{
+    &-dialog-menu{
+        width: 1200px !important;
+        margin: 30px auto;
+    }
+    &-menu{
+        width: 100%;
+        background-color: #fff;
+        &__img{
+           width: 323px;
+            height: 560px;
+            background-image: url(../images/menu-image.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        &__content{
+            width: calc(100% - 323px);
+            padding: 40px 30px 40px 80px;
+        }
+        &__header{
+            a{
+                @include fontF($familyMedium, 20px, 500, $color-black);
+            }
+            .modal-close{
+                position: relative;
+                top: auto;
+                right: auto;
+            }
+        }
+        &-link{
+            width: 100%;
+        }
+        &__logo{
+            width: 50%;
+        }
+        &__phone{
+            margin: 0 30px;
+            p{
+                font-size: 16px;
+                line-height: 1.4;
+                color: $color-text;
+            }
+        }
+        
+        &__footer{
+            ul{
+                li{
+                    padding-bottom: 10px;
+                    a{
+                        @include fontF($familyMedium, 16px, 400, $color-text);
+                        &:hover{
+                            color: $color-black;
+                        }
+                    }
+                }
+            }
+        }
+        .hide-modal{
+            display: none;
+        }
+    }
+    &-logo{
+        padding: 0;
+        width: auto;
+    }
+}
+.menu-nav{
+    position: relative;
+    margin: 30px 0 50px;
+    >ul{
+        >li{
+            width: 50%;
+            padding-bottom: 15px;
+            cursor: pointer;
+            a{
+                display: inline-block;
+                @include fontF($familyMedium, 20px, 500, $color-text);
+            }
+            ul{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                position: absolute;
+                top: 0%;
+                left: 50%;
+                width: 50%;
+                height: 100%;
+                transition: .3s;
+                opacity: 0;
+                visibility: hidden;
+                overflow-y: auto;
+                z-index: 100;
+                li{
+                    padding-bottom: 10px;
+                    a{
+                        transform: translateX(0);
+                        transition: .3s linear;
+                        @include fontF($familyMedium, 18px, 400, $color-black);
+                        &:hover{
+                            transform: translateX(10px);
+                        }
+                    }
+                }
+                &::-webkit-scrollbar {
+                    width: 5px;
+                    height: 8px;
+                    background-color: transparent;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: $color-bordercolor;
+                }
+                &::-webkit-scrollbar-thumb:hover {
+                    background-color: $color-bordercolor;
+                }
+            }
+            &:hover{
+                a{
+                    color: $color-black;
+                }
+                ul{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }   
+        }
+    }
+}
+
+@media (min-width: 1860px){
+    .modal{
+        &-dialog-menu{
+            width: 1800px !important;
+        }
+        &-menu{
+            &__img{
+                width: 485px;
+                height: 840px;
+            }
+            &__content{
+                padding: 40px 80px 40px 140px;
+                width: calc(100% - 485px);
+            }
+            &__header{
+                a{
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    .menu-nav{
+        >ul{
+            >li{
+                padding-bottom: 30px; 
+                a{
+                    font-size: 30px;
+                }
+                ul{
+                    li{
+                        padding-bottom: 25px;
+                        a{
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1280px){
+    .modal{
+        &-dialog-menu{
+            width: 960px !important;
+        }
+        &-menu{
+            &__img{
+                width: 260px;
+                height: 448px;
+            }
+            &__content{
+                width: calc(100% - 260px);
+                padding: 40px 30px;
+            }
+            &__header{
+                a{
+                    font-size: 16px;
+                }
+                .search-group{
+                    &.active{
+                        width: 495px;
+                    }
+                }
+            }
+            &__footer{
+                ul{
+                    li{
+                        a{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .menu-nav{
+        >ul{
+            >li{
+                a{
+                    font-size: 16px;
+                }
+                ul{
+                    li{
+                        a{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1000px){
+    .modal{
+        &-dialog-menu{
+            margin: 0 !important;
+            width: 100% !important;
+            height: 100vh;
+        }
+        &-menu{
+            height: 100%;
+            overflow-y: auto;
+            &__img{
+                display: none;
+            }
+            &__content{
+                width: 100%;
+                justify-content: start;
+            }
+            .header-lang{
+                display: none;
+            }
+        }
+    }
+    .menu-nav{
+        >ul{
+            >li{
+                width: 100%;
+                ul{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .modal{
+        &-menu{
+            &-link{
+                flex-direction: column;
+                align-items: start;
+            }
+            &__content{
+                padding: 40px 20px;
+            }
+            &__phone{
+                margin: 15px 0;
+            }
+            &__header{
+                .header-burger{
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    width: auto;
+                }
+                .modal-close{
+                    padding: 5px;
+                }
+            }
+        }
+    }
+}

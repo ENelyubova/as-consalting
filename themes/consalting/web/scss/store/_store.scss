@@ -1,0 +1,53 @@
+/* Кол-во товаров в корзине, избранном */
+.btn-header__count{
+    position: absolute;
+    opacity: 0;
+    top: calc(50% - 20px);
+    right: 0px;
+    min-width: 20px;
+    height: 20px;
+    padding: 0;
+    border-radius: 50%;
+    color: #323232;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 13px;
+    text-align: center; 
+    background: #FFE600;
+    &.active{
+        opacity: 1;
+    }
+}
+
+/* Кнопка Корзины */
+.btn-cart{
+    height: 45px;
+    width: 180px;
+    overflow: hidden;
+    background: transparent;
+    transition: .3s;
+    &_icon{
+        position: relative;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: $color-red;
+        background-image: url(../images/icon/cart.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 1.5rem;
+        &.active{
+            background: #1ED050;
+            background-image: url(../images/icon/cart.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &_txt{
+        white-space: nowrap;
+        @include fontF($familyRegular, 20px, 700, $color-red);
+        &.active{
+            color: #1ED050;
+        }
+    }
+}

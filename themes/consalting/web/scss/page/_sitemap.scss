@@ -1,0 +1,36 @@
+.sitemap-block{
+    .hide-sitemap{
+        display: none;
+    }
+    ul{
+        li{
+            position: relative;
+            cursor: pointer;
+            a{
+                position: relative;
+                display: inline-block;
+                padding: 5px 0;
+                outline: none;
+                text-decoration: none;
+                font-family: $familyRegular;
+                font-weight: 400;
+                color: $color-black;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 0;
+                    height: 2px;
+                    background-color: $color-black;
+                    transition: all 0.3s linear;
+                }
+                &:hover{
+                    &:before{
+                        width: 100%;
+                    }
+                }
+            }  
+        }
+    }
+}

@@ -1,0 +1,139 @@
+.lk-authorization{
+	width: 600px;
+	margin: 0 auto;
+	.lk-authorization__left{
+		float: left;
+		width: 50%;
+		padding: 0 40px 0 0;
+	    border-right: 1px solid #dfdfdf; 
+	}
+	.lk-authorization__right{
+		float: right;
+		width: 50%;
+		padding: 0 0 0 40px;
+		h2{
+		    padding: 6px 0 30px !important;
+		}
+	}
+	&.lk-authorization-sm-12{
+		width: 100%;
+		margin: 0;
+		padding: 40px 0px 0px;
+	}
+
+	h1, h2{
+		text-transform: none;
+		text-align: left;
+		padding: 0 0 20px !important;
+	}
+
+	&:after{
+		content: '';
+		clear: both;
+		display: block;
+	}
+}
+
+.lk-authorization-header{
+	.lk-authorization-header__desc{
+		color: #7A8086;
+		font-size: 14px;
+		font-family: $ubuntu;
+		font-weight: normal;
+		line-height: 24px;
+		padding: 0 0 10px;
+	}
+}
+
+.lk-authorization-reg{
+	.lk-authorization-reg__text{
+		color: rgba(0, 0, 0, 0.8);
+		font-size: 18px;
+		font-family: $ubuntu;
+	    line-height: 1.5;
+	    padding: 0 0 20px;
+	    ul{
+	    	li{
+	    		padding: 0 0 10px;
+	    	}
+	    }
+		p{
+			margin: 0 0 15px;
+		}
+		svg{
+			width: 240px;
+			height: 55px;
+		}
+	}
+	.but{
+		width: auto;
+		height: 45px;
+		line-height: 45px;
+		padding: 0 40px;
+		text-align: center;
+	}
+}
+
+@media (max-width: 768px){
+	.lk-authorization{
+		width: 600px;
+		margin: 0 auto;
+		.lk-authorization__left{
+			padding: 0 30px 0 0;
+		}
+		.lk-authorization__right{
+			padding: 0 0 0 30px;
+		}
+		&.lk-authorization-sm-12{
+			width: 100%;
+			padding: 40px 0px 0px;
+		}
+
+		h1, h2{
+			font-size: 22px;
+			padding: 0 0 25px;
+		}
+	}
+}
+
+@media (max-width: 640px){
+	.lk-authorization{
+		width: 100%;
+		.lk-authorization__left{
+			width: 100%;
+			border-right: none; 
+			padding: 0 0 40px;
+		}
+		.lk-authorization__right{
+			width: 100%;
+			padding: 0;
+			h2{
+			    padding: 6px 0 20px !important;
+			}
+		}
+		&.lk-authorization-sm-12{
+			width: 100%;
+			padding: 30px 0px 0px;
+		}
+		.lk-authorization__bottom{
+		    padding: 10px 0;
+		}
+
+		h1, h2{
+			/* font-size: 20px;*/
+			padding: 0 0 20px;
+		}
+	}
+}
+
+@media (max-width: 400px){
+	.lk-authorization-reg{
+		.but{
+			width: auto;
+			height: 42px;
+			line-height: 42px;
+			padding: 0 40px;
+			text-align: center;
+		}
+	}
+}

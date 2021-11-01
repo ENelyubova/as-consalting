@@ -1,0 +1,26 @@
+$familyRegular: 'Jost', sans-serif;
+$familyMedium: 'Montserrat', sans-serif;
+$icomoon: 'icomoon';
+
+@font-face {
+  font-family: $familyRegular;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: $familyMedium;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $icomoon;
+  src:  url('../fonts/icomoon.eot?na6e8g');
+  src:  url('../fonts/icomoon.eot?na6e8g#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?na6e8g') format('truetype'),
+    url('../fonts/icomoon.woff?na6e8g') format('woff'),
+    url('../fonts/icomoon.svg?na6e8g#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

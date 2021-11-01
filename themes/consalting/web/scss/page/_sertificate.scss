@@ -1,0 +1,17 @@
+/* Сертификаты */
+.sertificate{
+    &-carousel{
+        width: calc(100% + 20px);
+        margin: 0 -10px;
+        .slick-track{
+            margin-left: inherit;
+        }
+        img{
+            margin: 0 auto;
+            /* max-height: 400px;*/
+        }
+    }
+    &__item{
+        margin: 0 10px;
+    }
+}
